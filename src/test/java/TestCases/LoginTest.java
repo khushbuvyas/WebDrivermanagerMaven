@@ -28,8 +28,9 @@ public class LoginTest {
 
 		driver.findElement(By.name("identifier")).sendKeys("seleniumpractice3@gmail.com");
 		driver.findElement(By.xpath("//*[@id=\'identifierNext\']/div/span/span")).click();
-		
-		
+		driver.findElement(By.name("password")).sendKeys("Selenium1234");
+		driver.findElement(By.xpath("(//div[@jsname='LgbsSe']/span/span)[1]")).click();
+				
 	}
 
 	@AfterSuite
