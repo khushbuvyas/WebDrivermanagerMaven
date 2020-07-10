@@ -1,5 +1,7 @@
 package TestCases;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,12 +26,14 @@ public class LoginTest {
 	@Test
 	public void doLogin() {
 		
+		
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.get("http://gmail.com");
 
 		driver.findElement(By.name("identifier")).sendKeys("seleniumpractice3@gmail.com");
 		driver.findElement(By.xpath("//*[@id=\'identifierNext\']/div/span/span")).click();
-		driver.findElement(By.name("password")).sendKeys("Selenium1234");
-		driver.findElement(By.xpath("(//div[@jsname='LgbsSe']/span/span)[1]")).click();
+		//driver.findElement(By.name("password")).sendKeys("Selenium1234");
+		//driver.findElement(By.xpath("(//div[@jsname='LgbsSe']/span/span)[1]")).click();
 				
 	}
 
